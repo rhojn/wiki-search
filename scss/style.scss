@@ -1,0 +1,138 @@
+@import "reset";
+@import "mixins";
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+//skeleton
+header {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	@include flex-box(center, center);
+}
+
+.header--active {
+	height: 400px;
+	transition: height 0.3s ease-out;
+	.search {
+		bottom: 1.5rem;
+	}
+}
+
+main, footer {
+	display: none;
+}
+
+footer {
+	width: 100%;
+	height: 40px;
+}
+
+.hero {
+	padding: 0 4rem;
+}
+
+.search {
+	width: 600px;
+	height: 60px;
+	position: absolute;
+	bottom: 20%;
+	@include flex-box(space-between, center);
+	&__bar {
+		width: 300px;
+		height: 35px;
+	}
+	&__btn {
+		width: 120px;
+		height: 35px;
+		cursor: pointer;
+	}
+}
+
+.result {
+	margin: 2rem 0;
+}
+
+.container {
+	width: 960px;
+	margin: auto;
+	padding: 64px 0;
+}
+//skin
+header {
+	background: url(https://unsplash.it/1920/1080?image=1050);
+	background-position: center;
+	text-align: center;
+}
+
+main {
+	font-family: 'Roboto', san-serif;
+}
+
+footer {
+	background-color: $primary-color;
+	color: #fff;
+	font-family: 'Roboto', san-serif;
+	text-align: center;
+	line-height: 2.6;
+}
+
+.hero {
+	color: #fff;
+	border: 12px solid #fff;
+	&__text {
+		font-weight: bold;
+		@include font-size(64px);
+		margin: 1.5rem 0;
+	}
+}
+
+.search {
+	background-color: #fff;
+	border-radius: 12px;
+	padding: 1rem;
+	&__bar, &__btn {
+		font-family: 'Roboto', san-serif;
+		@include font-size(16px);
+		border-radius: 4px;
+	}
+
+	&__bar {
+		border: 1px solid #E6E6E6;
+		padding: 0 0.5rem;
+		&:focus {
+			outline: $primary-color auto 5px; 
+		}
+	}
+
+	&__btn {
+		background-color: $primary-color;
+		border: 0;
+		color: #fff;
+	}
+}
+
+.result {
+	&__title {
+		a {
+			color: #333333;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	&__url {
+		color: $primary-color;
+	}
+	&__content {
+		color: #4D4D4D;
+	}
+}

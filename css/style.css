@@ -1,0 +1,119 @@
+html,
+body,
+ul,
+ol,
+h3,
+p {
+  margin: 0;
+  padding: 0; }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+* {
+  box-sizing: border-box; }
+
+header {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.header--active {
+  height: 400px;
+  transition: height 0.3s ease-out; }
+  .header--active .search {
+    bottom: 1.5rem; }
+
+main, footer {
+  display: none; }
+
+footer {
+  width: 100%;
+  height: 40px; }
+
+.hero {
+  padding: 0 4rem; }
+
+.search {
+  width: 600px;
+  height: 60px;
+  position: absolute;
+  bottom: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .search__bar {
+    width: 300px;
+    height: 35px; }
+  .search__btn {
+    width: 120px;
+    height: 35px;
+    cursor: pointer; }
+
+.result {
+  margin: 2rem 0; }
+
+.container {
+  width: 960px;
+  margin: auto;
+  padding: 64px 0; }
+
+header {
+  background: url(https://unsplash.it/1920/1080?image=1050);
+  background-position: center;
+  text-align: center; }
+
+main {
+  font-family: 'Roboto', san-serif; }
+
+footer {
+  background-color: #2CC29C;
+  color: #fff;
+  font-family: 'Roboto', san-serif;
+  text-align: center;
+  line-height: 2.6; }
+
+.hero {
+  color: #fff;
+  border: 12px solid #fff; }
+  .hero__text {
+    font-weight: bold;
+    font-size: 64px;
+    font-size: 4rem;
+    margin: 1.5rem 0; }
+
+.search {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem; }
+  .search__bar, .search__btn {
+    font-family: 'Roboto', san-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    border-radius: 4px; }
+  .search__bar {
+    border: 1px solid #E6E6E6;
+    padding: 0 0.5rem; }
+    .search__bar:focus {
+      outline: #2CC29C auto 5px; }
+  .search__btn {
+    background-color: #2CC29C;
+    border: 0;
+    color: #fff; }
+
+.result__title a {
+  color: #333333;
+  text-decoration: none; }
+  .result__title a:hover {
+    text-decoration: underline; }
+.result__url {
+  color: #2CC29C; }
+.result__content {
+  color: #4D4D4D; }
+
+/*# sourceMappingURL=style.css.map */
